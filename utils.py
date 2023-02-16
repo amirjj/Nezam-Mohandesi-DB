@@ -2,13 +2,15 @@
 
 """
 
+
 def logit(msg, **data):
     """ arg: page_number, exception, msg
     
     log he current progress of the programm and the message
     """
     pass
-    
+
+
 def json_to_tuple_conv(json_par):
     """return a tuple
     converted from a json
@@ -18,7 +20,8 @@ def json_to_tuple_conv(json_par):
         tuple_par = tuple_par + ((el, json_par[el]),)
     
     return tuple_par
-    
+
+
 def make_formfields_config(form_fields, page_number, viewstat, eventvalidation):
     """ create formfileds tuple configuration for request
     

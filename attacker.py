@@ -27,23 +27,29 @@ class Attacker:
         OUTFILE = OUTPUT_DIR + 'out_page%s.html'%self.page_number
         with open(OUTFILE, 'w') as writer:
             writer.write(the_page)
-    def get_viewstat(self):
+
+    @staticmethod
+    def get_viewstat():
         with open(VIEWSTAT_FILE, "r") as f:
             return f.readline()
-    
-    def save_viewstat(self, viewstat):
+
+    @staticmethod
+    def save_viewstat(viewstat):
         with open(VIEWSTAT_FILE, "w") as f:
             return f.write(viewstat)
-        
-    def get_eventvalidation(self):
+
+    @staticmethod
+    def get_eventvalidation():
         with open(EVENTVALIDATON_FILE, "r") as f:
             return f.readline()
-                
-    def save_eventvalidation(self, eventvalidation):
+
+    @staticmethod
+    def save_eventvalidation(eventvalidation):
         with open(EVENTVALIDATON_FILE, "w") as f:
             return f.write(eventvalidation)
-                
-    def fetch_header_parameters(self):
+
+    @staticmethod
+    def fetch_header_parameters():
         r = requests.get(URI, headers=GET_HEADERS)
         return_string = r.content
         viewstat = pars_and_fetch(return_string, '__VIEWSTATE')
@@ -51,7 +57,6 @@ class Attacker:
         return viewstat, eventvalidation
         
     def single_attack(self, formFields):
-        print("----------single attack------")
         encodedFields = urllib.parse.urlencode(formFields)
         encodedFields = encodedFields.encode('ascii')
         req = urllib.request.Request(URI, encodedFields, HEADERS)
@@ -60,11 +65,9 @@ class Attacker:
            the_page = response.read().decode('utf-8')
            print(response.status)
            print(response.reason)
-           print("----------------------------")
            self.save_fetched_data(the_page)
            return the_page
-    
-    
+
     def first_search(self):
         viewstat = self.get_viewstat()
         eventvalidation = self.get_eventvalidation()
@@ -111,8 +114,3 @@ class Attacker:
             
             self.save_status()
             time.sleep(10)
-            
-            
-            # logit("iteration %s started"%iteration, 'info', self.page_number)
-            
-        
