@@ -1,9 +1,13 @@
 """Configuration for API requests and general script globals
 
 """
+import os
 
-import os 
+STATUS_FILE = os.path.dirname(os.path.abspath(__file__)) + '/logs/status.log'
+OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__)) + '/output/'
 
+VIEWSTAT_FILE = os.path.dirname(os.path.abspath(__file__)) + '/viewstat.cfg'
+EVENTVALIDATON_FILE = os.path.dirname(os.path.abspath(__file__)) + '/eventvalidation.cfg'
 
 URI = 'http://185.47.49.235/kshnezam/searcheng.aspx'
 TOTAL_ENTRY = 21283
@@ -73,11 +77,6 @@ INITIAL_FIELDS = {
    'Button1': r'جستجو',
 }
 
-STATUS_FILE = os.path.dirname(os.path.abspath(__file__)) + '/logs/status.log'
-OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__)) + '/output/'
-
-VIEWSTAT_FILE = os.path.dirname(os.path.abspath(__file__)) + '/viewstat.cfg'
-EVENTVALIDATON_FILE = os.path.dirname(os.path.abspath(__file__)) + '/eventvalidation.cfg'
 
 
 # https://docs.python.org/3/howto/logging.html
