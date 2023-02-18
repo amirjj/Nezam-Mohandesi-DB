@@ -9,7 +9,7 @@ OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__)) + '/output/'
 VIEWSTAT_FILE = os.path.dirname(os.path.abspath(__file__)) + '/viewstat.cfg'
 EVENTVALIDATON_FILE = os.path.dirname(os.path.abspath(__file__)) + '/eventvalidation.cfg'
 
-URI = 'http://185.47.49.235/kshnezam/searcheng.aspx'
+URI = '' # Place the URL
 TOTAL_ENTRY = 21283
 NUMBER_OF_PAGES = 2065
 
@@ -23,8 +23,8 @@ HEADERS = {
     'Content-Type': 'application/x-www-form-urlencoded',
     'Cookie': 'CookieCheck=Detected; ASP.NET_SessionId=j34bwjr5iwkrwx1taridcdiz',
     'Host': '185.47.49.235',
-    'Origin': 'http://185.47.49.235',
-    'Referer': 'http://185.47.49.235/kshnezam/searcheng.aspx',
+    'Origin': '', # Place the URL
+    'Referer': '', # Place the URL
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
 }
@@ -37,7 +37,7 @@ GET_HEADERS = {
     'Connection': 'keep-alive',
     'Content-Type': 'application/x-www-form-urlencoded',
     'Cookie': 'CookieCheck=Detected; ASP.NET_SessionId=j34bwjr5iwkrwx1taridcdiz',
-    'Host': '185.47.49.235',
+    'Host': '', #Place the IP
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
 }
