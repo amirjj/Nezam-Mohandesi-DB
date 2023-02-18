@@ -55,8 +55,8 @@ HEADERS = {
     'Content-Type': 'application/x-www-form-urlencoded',
     'Cookie': 'CookieCheck=Detected; ASP.NET_SessionId=5n35nbtexnvpkszxldjjryrf',
     'Host': '185.47.49.235',
-    'Origin': 'http://185.47.49.235',
-    'Referer': 'http://185.47.49.235/kshnezam/searcheng.aspx',
+    'Origin': '', # Place the URL
+    'Referer': '', # Place the URL
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
 }
